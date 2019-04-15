@@ -100,7 +100,7 @@ Another area of persistence good for routine analysis are the startup items coll
 	AutoStartSoftware 
 	| where (Device like '%')
 	| where ((StartupValue like '%Users%') or (StartupValue like '%ProgramData%'))
-	| where (StartupValue !like '%zoom.exe%')
+	| where (StartupValue !like '%example.exe%')
 	| order by FileName desc
 		
 	- Least Frequency Counts (find the start-ups which are anomalous and occur infrequently)
